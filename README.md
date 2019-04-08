@@ -47,7 +47,24 @@ Create Rest API for the below -
                           }
                       ]
             }
+   
+   3) Add a new menu section. For this scenario run the given code and use PostMan tool to send the request body which will have the name of the new Menu Section to be added.
          
+         Resquest Body - 
+         
+         "name":"Chicken Special"
+         
+         Response Body - 
+         
+         {
+                "success": true,
+                "MenuSection": [
+                    {
+                        "name": "Chicken Special",
+                        "id": 7
+                    }
+                ]
+            }
 
 
 
