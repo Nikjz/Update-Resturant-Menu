@@ -2,11 +2,7 @@
 
 To install all the node module run the below command - 
 
-      npm install express --save
-
-      npm install sqlite
-
-      npm install bluebird
+      npm install
 
 
 Create Rest API for the below - 
@@ -15,7 +11,7 @@ Create Rest API for the below -
          
          http://localhost:3000/menusection/id     ---- Replace id with ID in the Menu Section
          
-         Expected output - 
+         Response Body -
          
          {
                 "MenuSection": [
@@ -30,7 +26,7 @@ Create Rest API for the below -
          
          http://localhost:3000/menusection
          
-         Expected output - 
+         Response Body - 
                {
                       "MenuSection": [
                           {
@@ -50,21 +46,52 @@ Create Rest API for the below -
    
    3) Add a new menu section. For this scenario run the given code and use PostMan tool to send the request body which will have the name of the new Menu Section to be added.
          
-         Resquest Body - 
+            Resquest Body - 
+
+               "name":"Chicken Special"
          
-         "name":"Chicken Special"
+            Response Body - 
+
+               {
+                      "success": true,
+                      "MenuSection": [
+                          {
+                              "name": "Chicken Special",
+                              "id": 7
+                          }
+                      ]
+                  }
+                  
+   4) Update the existing new menu section. For this scenario run the given code and use PostMan tool to send the request body which will update the name of the Menu Section and the URL is also needed to pass the id.
          
-         Response Body - 
+            http://localhost:3000/menusection/id     ---- Replace id with ID in the Menu Section
          
-         {
-                "success": true,
-                "MenuSection": [
-                    {
-                        "name": "Chicken Special",
-                        "id": 7
-                    }
-                ]
-            }
+            Resquest Body - 
+
+               "name":"Chicken Special New"
+         
+            Response Body - 
+
+               {
+                      "success": true,
+                      "MenuSection": [
+                          {
+                              "name": "Chicken Special New",
+                              "id": 7
+                          }
+                      ]
+               }
+               
+   5) Delete the existing new menu section. For this scenario run the following code and try hitting the below URL and at end of the URL mention the id of the Menu Section.
+         
+            http://localhost:3000/menusection/id     ---- Replace id with ID in the Menu Section
+         
+         
+            Response Body - 
+
+               {
+                  "success": true
+               }
 
 
 
