@@ -77,13 +77,7 @@ router.delete('/menusection/:id', async (req, res, next) => {
         const [MenuSection] = await Promise.all([
             db.all('DELETE FROM menuSection WHERE id = ?',req.params.id)
         ]);
-        if (Object.keys(MenuSection).length ==0){
-            res.send({'No Delete':'No such item id to delete in Menu Section'});
-        }else {
-            res.send({'success':true});
-        }
-
-
+        res.send({'success':true});
     } catch (err) {
         next(err);
     }
