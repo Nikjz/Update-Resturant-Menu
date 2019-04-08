@@ -15,7 +15,39 @@ Create Rest API for the below -
          
          http://localhost:3000/menusection/id     ---- Replace id with ID in the Menu Section
          
-         ** Expected output - {"MenuSection":[{"name":"Breakfast Special","id":2}]} **
+         Expected output - 
+         
+         {
+                "MenuSection": [
+                    {
+                        "name": "Lunch Special",
+                        "id": 1
+                    }
+                ]
+          }
+         
+ 2) Get all menu section. For this scenario run the following code and try hitting the below URL to get all the menu sections.
+         
+         http://localhost:3000/menusection
+         
+         Expected output - 
+               {
+                      "MenuSection": [
+                          {
+                              "name": "Lunch Special",
+                              "id": 1
+                          },
+                          {
+                              "name": "Breakfast Special",
+                              "id": 2
+                          },
+                          {
+                              "name": "Dinner Special",
+                              "id": 3
+                          }
+                      ]
+            }
+         
 
 
 
