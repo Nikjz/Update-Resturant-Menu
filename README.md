@@ -8,7 +8,7 @@ To install all the node module run the below command -
 The sample SQLite schema looks like - 
 
 
-
+![alt text](https://github.com/Nikjz/Update-Resturant-Menu/blob/master/Capture.PNG)
 
 Create Rest API for the below - 
 
